@@ -1,0 +1,133 @@
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--Bright-blue: hsl(245, 75%, 52%);
+	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Dark-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: "Red Hat Display", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url("images/pattern-background-mobile.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: var(--pale-blue);
+}
+
+.container {
+	max-width: 24rem;
+	background-color: white;
+	border-radius: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.illustration {
+	max-width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+	object-fit: contain;
+	border-radius: 1.5rem 1.5rem 0 0;
+}
+
+h1 {
+	margin-top: 2.5rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--Dark-blue);
+}
+
+h2 {
+	margin-top: 1.5rem;
+	text-align: center;
+	padding: 0 2rem;
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--Dark-blue);
+}
+
+.payment {
+	margin-top: 1.5rem;
+	width: 20rem;
+	height: 5.7rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1rem;
+	background-color: var(--Very-pale-blue);
+	border-radius: 1rem;
+}
+
+.plan {
+	margin-left: -3rem;
+}
+
+.plan p {
+	font-size: 1rem;
+}
+
+.plan-title {
+	font-weight: 700;
+	color: var(--Dark-blue);
+}
+
+.price {
+	color: var(--Dark-blue);
+}
+
+.payment a {
+	font-weight: 700;
+	font-size: 1rem;
+	color: var(--Bright-blue);
+}
+
+button {
+	width: 20rem;
+	height: 3.5rem;
+	border-radius: 1rem;
+	font-weight: 700;
+	font-size: 1rem;
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+#proceedBtn {
+	margin-top: 2rem;
+	color: white;
+	background-color: var(--Bright-blue);
+	box-shadow: 3px 10px 35px -10px var(--Desaturated-blue);
+}
+
+#cancelBtn {
+	color: var(--Dark-blue);
+	background-color: transparent;
+	margin-bottom: 1.5rem;
+}
+
+@media (min-width: 700px) {
+	body {
+		background-size: contain;
+		background-image: url("images/pattern-background-desktop.svg");
+		background-position: top;
+	}
+}
